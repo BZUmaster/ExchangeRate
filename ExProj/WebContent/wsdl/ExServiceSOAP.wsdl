@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://bzu.cloud:8080/ExProj/services/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ExService" targetNamespace="http://bzu.cloud:8080/ExProj/services/">
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://bzu.cloud:8080/ExProj/services/">
+			<xsd:element name="rate" type="xsd:float"/>
+			<xsd:element name="parameters" type="tns:currencies"/>
+			<xsd:complexType name="currencies">
+				<xsd:sequence>
+					<xsd:element maxOccurs="1" minOccurs="1" name="FromCurrency" type="tns:Currency"/>
+					<xsd:element maxOccurs="1" minOccurs="1" name="ToCurrency" type="tns:Currency"/>
+
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:simpleType name="Currency">
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="AUD"/>
+					<xsd:enumeration value="BGN"/>
+					<xsd:enumeration value="BRL"/>
+					<xsd:enumeration value="CAD"/>
+					<xsd:enumeration value="CHF"/>
+					<xsd:enumeration value="CNY"/>
+					<xsd:enumeration value="CZK"/>
+					<xsd:enumeration value="DKK"/>
+					<xsd:enumeration value="EUR"/>
+					<xsd:enumeration value="GBP"/>
+					<xsd:enumeration value="HKD"/>
+					<xsd:enumeration value="HRK"/>
+					<xsd:enumeration value="HUF"/>
+					<xsd:enumeration value="IDR"/>
+					<xsd:enumeration value="ILS"/>
+					<xsd:enumeration value="INR"/>
+					<xsd:enumeration value="JPY"/>
+					<xsd:enumeration value="KRW"/>
+					<xsd:enumeration value="MXN"/>
+					<xsd:enumeration value="MYR"/>
+					<xsd:enumeration value="NOK"/>
+					<xsd:enumeration value="NZD"/>
+					<xsd:enumeration value="PHP"/>
+					<xsd:enumeration value="PLN"/>
+					<xsd:enumeration value="RON"/>
+					<xsd:enumeration value="RUB"/>
+					<xsd:enumeration value="SEK"/>
+					<xsd:enumeration value="SGD"/>
+					<xsd:enumeration value="THB"/>
+					<xsd:enumeration value="TRY"/>
+					<xsd:enumeration value="USD"/>
+					<xsd:enumeration value="ZAR"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="CalculateExRateResponse">
+		<wsdl:part element="tns:rate" name="rate"/>
+	</wsdl:message>
+	<wsdl:message name="CalculateExRateRequest">
+		<wsdl:part element="tns:parameters" name="parameters"/>
+	</wsdl:message>
+	<wsdl:portType name="ExService">
+		<wsdl:operation name="CalculateExRate">
+			<wsdl:input message="tns:CalculateExRateRequest"/>
+			<wsdl:output message="tns:CalculateExRateResponse"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="ExServiceSOAP" type="tns:ExService">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="CalculateExRate">
+			<soap:operation soapAction="http://bzu.cloud:8080/ExProj/services/NewOperation"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="ExService">
+		<wsdl:port binding="tns:ExServiceSOAP" name="ExServiceSOAP">
+			<soap:address location="http://localhost:8080/ExProj/services/ExServiceSOAP"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
