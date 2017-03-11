@@ -1,0 +1,9 @@
+c:\users\ahmad.zaroor\documents\visual studio 2013\Projects\WebServices.Soap.Tests\CurrencyConvertorClient\bin\Debug\CurrencyConvertorClient.exe.config
+c:\users\ahmad.zaroor\documents\visual studio 2013\Projects\WebServices.Soap.Tests\CurrencyConvertorClient\bin\Debug\CurrencyConvertorClient.exe
+c:\users\ahmad.zaroor\documents\visual studio 2013\Projects\WebServices.Soap.Tests\CurrencyConvertorClient\bin\Debug\CurrencyConvertorClient.pdb
+c:\users\ahmad.zaroor\documents\visual studio 2013\Projects\WebServices.Soap.Tests\CurrencyConvertorClient\obj\Debug\CurrencyConvertorClient.csprojResolveAssemblyReference.cache
+c:\users\ahmad.zaroor\documents\visual studio 2013\Projects\WebServices.Soap.Tests\CurrencyConvertorClient\obj\Debug\CurrencyConvertorClient.Form1.resources
+c:\users\ahmad.zaroor\documents\visual studio 2013\Projects\WebServices.Soap.Tests\CurrencyConvertorClient\obj\Debug\CurrencyConvertorClient.Properties.Resources.resources
+c:\users\ahmad.zaroor\documents\visual studio 2013\Projects\WebServices.Soap.Tests\CurrencyConvertorClient\obj\Debug\CurrencyConvertorClient.csproj.GenerateResource.Cache
+c:\users\ahmad.zaroor\documents\visual studio 2013\Projects\WebServices.Soap.Tests\CurrencyConvertorClient\obj\Debug\CurrencyConvertorClient.exe
+c:\users\ahmad.zaroor\documents\visual studio 2013\Projects\WebServices.Soap.Tests\CurrencyConvertorClient\obj\Debug\CurrencyConvertorClient.pdb
